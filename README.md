@@ -6,9 +6,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Firebase deployment
+
+1. Make sure you have Firebase installed `sudo npm i -g firebase-tools`
+2. Log into firebase `firebase login`
+3. If needed, `firebase init`
+4. Run `npm run deploy:firebase` to deploy to Firebase. Navigate to `https://angular-website-17a7c.firebaseapp.com`.
+
 ## GHPages deployment
 
-Run `npm run deploy:gh` to deploy to GHPages. Navigate to `https://jeonbrian.github.io/angular-website/`.
+1. Make sure you have GHPages installed `sudo npm i -g angular-cli-ghpages`
+2. Set git credentials `git config -g user.email`
+3. Run `npm run deploy:gh` to deploy to GHPages. Navigate to `https://jeonbrian.github.io/angular-website/`.
 
 ## Code scaffolding
 
