@@ -1,0 +1,12 @@
+.login {
+    max-width: 320px;
+    margin-top: 40px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    margin-bottom: 16px;
+}
