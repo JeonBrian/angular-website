@@ -1,14 +1,2 @@
 <navbar></navbar>
 <router-outlet></router-outlet>
-
-Courses
-<input type="text" (keyup.enter)="add(course)" #course>
-<ul *ngIf="courses$ | async as courses">
-    <li *ngFor="let course of courses">
-        {{ course.payload.val() | json }}
-        {{ course.payload.val().name }}
-        {{ course.payload.val().age }}
-        <button (click)="update(course)">Update</button>
-        <button (click)="delete(course)">Delete</button>
-    </li>
-</ul>

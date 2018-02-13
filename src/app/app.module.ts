@@ -11,10 +11,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NewPostComponent } from './new-post/new-post.component';
+import { ArchiveComponent } from './archive/archive.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'archive', component: ArchiveComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'new', component: NewPostComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -24,7 +28,9 @@ const appRoutes: Routes = [
     NavbarComponent,
     HomeComponent,
     LoginComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NewPostComponent,
+    ArchiveComponent
   ],
   imports: [
     RouterModule.forRoot(

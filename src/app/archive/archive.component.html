@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Archive</h1>
+  <ul *ngIf="courses$ | async as courses">
+      <li *ngFor="let course of courses">
+          {{ course.payload.val() | json }}
+          {{ course.payload.val().name }}
+          {{ course.payload.val().age }}
+          <button (click)="update(course)">Update</button>
+          <button (click)="delete(course)">Delete</button>
+      </li>
+  </ul>
+</div>
