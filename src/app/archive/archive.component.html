@@ -1,11 +1,11 @@
 <div class="container">
-  <h1>Archive</h1>
-  <div *ngFor="let course of courses$ | async" class="post row">
-    <div class="col-xs-6">
-      <h2>{{ course.payload.val().title }}</h2>
-      <p>{{ course.payload.val().content }}</p>
+  <div>
+    <div *ngFor="let course of courses$ | async" class="post row">
+      <div class="col-xs-9">
+        <h4>{{ course.payload.val().title }}</h4>
+        <p>{{ course.payload.val().content }}</p>
+      </div>
+      <img class="col-xs-3" src="http://via.placeholder.com/350x150">
     </div>
-    <img class="col-xs-6" src="http://via.placeholder.com/350x150">
   </div>
-
 </div>
