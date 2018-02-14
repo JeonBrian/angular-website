@@ -23,7 +23,7 @@ export class NewPostFormComponent {
     private router: Router
   ) { }
 
-  onSubmit(form) {
+  onSubmit() {
     console.log('SUBMIT');
     console.log(this.model);
 
