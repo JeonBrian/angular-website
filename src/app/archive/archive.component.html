@@ -1,12 +1,42 @@
+
 <div class="container">
-  <div>
-    <div *ngFor="let course of courses$ | async | reverse" class="post row">
-      <div class="col-9">
-        <h4>{{ course.payload.val().title }}</h4>
-        <i>Category: {{ course.payload.val().category }}</i>
-        <p>{{ course.payload.val().content }}</p>
+  <div class="row">
+    <div class="col-md-4 col-lg-3 side">
+      <ul class="list-group">
+        <li class="list-group-item">Welcome to FGPedia.</li>
+      </ul>
+    </div>
+    <div class="col-md-8 col-lg-9 main">
+      <div class="input-group mb-3">
+        <a routerLink="/new" id="ask-input" class="btn btn-outline-secondary">What have you found?</a>
       </div>
-      <img class="col-3">
+      <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/">Popular</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/">Necalli</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/">Cody</a>
+            </li>
+          </ul>
+
+          
+        </div>
+        <div class="card-body">
+          <div *ngFor="let course of courses$ | async | reverse" class="post">
+            <small><a routerLink="/">{{ course.payload.val().category }}</a></small>
+            <h6>{{ course.payload.val().title }}</h6>
+            <p>{{ course.payload.val().content }}</p>
+            <button type="button" class="btn btn-outline-secondary btn-sm">Upvote | 4</button>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
     </div>
   </div>
 </div>

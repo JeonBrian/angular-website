@@ -2,10 +2,51 @@
     margin-top: 32px;
 }
 
-.post {
+.card-header-tabs a.active {
+    color: #555;
+}
+.card-header-tabs a {
+    color: #AAA;
+}
+
+.side {
     margin-bottom: 16px;
 }
 
-.post img {
-    float: right;
+.main .card {
+    margin-bottom:16px;
+}
+
+.main .card-body {
+    padding: 0;
+    min-height: 32px;
+}
+
+.post {
+    padding: 20px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.post h6 {
+    margin-top: 8px;
+}
+
+.post small a {
+    color: #BBB;
+}
+
+.post a:hover {
+    text-decoration: none;
+}
+
+#ask-input {
+    width: 100%;
+    text-align: left;
+    background-color: #FFF;
+    color: #999;
+}
+
+#ask-input:hover {
+    background-color: #FFF;
+    color: #555;
 }

@@ -23,7 +23,7 @@ import { NewPostFormComponent } from './new-post-form/new-post-form.component';
 import { ReversePipe } from './reverse-pipe.pipe';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: ArchiveComponent },
   { path: 'archive', component: ArchiveComponent },
   { path: 'login', component: LoginComponent },
   { path: 'new', component: NewPostComponent },
