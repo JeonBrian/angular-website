@@ -1,0 +1,35 @@
+<form #postForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" 
+      required 
+      [(ngModel)]="model.title" name="title" 
+      #title="ngModel">
+    <div *ngIf="title.invalid && title.touched" class="alert alert-danger">
+      <div *ngIf="title.errors.required">Title is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="content">Content</label>
+    <input type="text" class="form-control" id="content" 
+      required 
+      [(ngModel)]="model.content" name="content"
+      #content="ngModel">
+    <div *ngIf="content.invalid && content.touched" class="alert alert-danger">
+      <div *ngIf="content.errors.required">Content is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="power">Hero Power</label>
+    <select class="form-control" id="category" 
+      required 
+      [(ngModel)]="model.category" name="category">
+      <option *ngFor="let cat of categories" [value]="cat">{{cat}}</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!postForm.form.valid">Submit</button>
+  <button type="button" class="btn btn-default" (click)="newPost();">New Hero</button>
+</form>

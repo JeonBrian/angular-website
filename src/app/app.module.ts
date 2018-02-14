@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // Outside
 import { AngularFireModule } from 'angularfire2';
@@ -18,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NewPostComponent } from './new-post/new-post.component';
 import { ArchiveComponent } from './archive/archive.component';
+import { NewPostFormComponent } from './new-post-form/new-post-form.component';
+import { ReversePipe } from './reverse-pipe.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,7 +38,9 @@ const appRoutes: Routes = [
     LoginComponent,
     NotFoundComponent,
     NewPostComponent,
-    ArchiveComponent
+    ArchiveComponent,
+    NewPostFormComponent,
+    ReversePipe
   ],
   imports: [
     RouterModule.forRoot(
@@ -44,7 +49,8 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

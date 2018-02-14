@@ -1,8 +1,9 @@
 <div class="container">
   <div>
-    <div *ngFor="let course of courses$ | async" class="post row">
+    <div *ngFor="let course of courses$ | async | reverse" class="post row">
       <div class="col-9">
         <h4>{{ course.payload.val().title }}</h4>
+        <i>Category: {{ course.payload.val().category }}</i>
         <p>{{ course.payload.val().content }}</p>
       </div>
       <img class="col-3">
