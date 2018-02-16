@@ -1,30 +1,25 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-lg-3 side">
-      <ul class="list-group">
-        <li class="list-group-item">Welcome to FGPedia.</li>
-      </ul>
+    <div class="col-md-3 col-lg-3 side">
     </div>
-    <div class="col-md-8 col-lg-9 main">
-      <div class="input-group mb-3">
-        <a routerLink="/new" id="ask-input" class="btn btn-outline-secondary">What have you found?</a>
+    <div class="col-md-6 col-lg-6 main">
+      <div class="actions">
+        <a routerLink="/new"><button class="btn btn-primary">Post new</button></a>
       </div>
       <div class="card">
         <div class="card-header">
           <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
-              <a class="nav-link active" routerLink="/">Popular</a>
+              <a class="nav-link active" routerLink="/">New</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/">Necalli</a>
+              <a class="nav-link" routerLink="/">Popular</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/">Cody</a>
+              <a class="nav-link" routerLink="/">Saved</a>
             </li>
           </ul>
-
-          
         </div>
         <div class="card-body">
           <div *ngFor="let course of courses$ | async | reverse" class="post">
@@ -35,8 +30,8 @@
           </div>
         </div>
       </div>
-      <div>
-      </div>
+    </div>
+    <div class="col-md-3 col-lg-3 side">
     </div>
   </div>
 </div>

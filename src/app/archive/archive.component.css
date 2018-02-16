@@ -1,3 +1,12 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul ul {
+    padding-left: 16px;
+}
+
 .container {
     margin-top: 32px;
 }
@@ -7,10 +16,6 @@
 }
 .card-header-tabs a {
     color: #AAA;
-}
-
-.side {
-    margin-bottom: 16px;
 }
 
 .main .card {
@@ -49,4 +54,8 @@
 #ask-input:hover {
     background-color: #FFF;
     color: #555;
+}
+
+.actions {
+    margin-bottom: 16px;
 }

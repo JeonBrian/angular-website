@@ -21,12 +21,16 @@ import { NewPostComponent } from './new-post/new-post.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { NewPostFormComponent } from './new-post-form/new-post-form.component';
 import { ReversePipe } from './reverse-pipe.pipe';
+import { GameComponent } from './game/game.component';
+import { CharacterComponent } from './character/character.component';
 
 const appRoutes: Routes = [
-  { path: '', component: ArchiveComponent },
+  { path: 'game/:id/character/:id', component: CharacterComponent },
+  { path: 'game/:id', component: GameComponent },
   { path: 'archive', component: ArchiveComponent },
   { path: 'login', component: LoginComponent },
   { path: 'new', component: NewPostComponent },
+  { path: '', component: ArchiveComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -40,7 +44,9 @@ const appRoutes: Routes = [
     NewPostComponent,
     ArchiveComponent,
     NewPostFormComponent,
-    ReversePipe
+    ReversePipe,
+    GameComponent,
+    CharacterComponent
   ],
   imports: [
     RouterModule.forRoot(
